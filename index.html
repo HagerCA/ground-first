@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ground First · Christopher Hager</title>
+
+<!-- Quiet publish: the link works for anyone it is given to, search engines skip it.
+     To make this page publicly indexable, delete the two meta lines below and robots.txt. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+
+<meta name="author" content="Christopher Hager">
+<meta name="description" content="Everybody wants the shield. The shield is the second thing. A practice for grounding and protection.">
+<meta property="og:title" content="Ground First">
+<meta property="og:description" content="Everybody wants the shield. The shield is the second thing.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#1B0C20">
+
+<style>
+/* ── Self-hosted type. Nothing here reaches the internet. ───────────── */
+@font-face{font-family:'Space Grotesk';src:url('./fonts/SpaceGrotesk-a57c9413.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Space Grotesk';src:url('./fonts/SpaceGrotesk-e911c2d9.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:swap;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'DM Sans';src:url('./fonts/DMSans-f6298972.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap;}
+@font-face{font-family:'DM Sans';src:url('./fonts/DMSans-151a53ae.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Instrument Serif';src:url('./fonts/InstrumentSerif-99cc6edf.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Instrument Serif';src:url('./fonts/InstrumentSerif-fa1a1a83.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+
+:root{
+  --crown:#1B0C20;
+  --crown-2:#2A1130;
+  --mirror:#E7E7E7;
+  --ankh:#A57626;
+  --ankh-hi:#D9A648;
+  --triton:#7C2D50;
+  --mystic:#3B1A4C;
+  --gaia:#1D3237;
+  --paper:#FBF8F4;
+  --ink:#1B0C20;
+  --ink-2:#584C5E;
+  --rule:rgba(27,12,32,.14);
+  --display:'Instrument Serif',Georgia,serif;
+  --head:'Space Grotesk',"Helvetica Neue",Arial,sans-serif;
+  --body:'DM Sans',-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:19px;line-height:1.72;
+  font-variant-ligatures:common-ligatures;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 28px;}
+
+/* ── Hero ───────────────────────────────────────────────────────────── */
+.hero{
+  position:relative;overflow:hidden;color:var(--mirror);
+  background:
+    radial-gradient(ellipse 120% 100% at 50% 50%, #1B0C20 0%, #2A1130 45%, #7C2D50 100%);
+  padding:70px 0 78px;text-align:center;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(231,231,231,.11) 1px, transparent 1.2px);
+  background-size:7px 7px;
+}
+.hero > *{position:relative;z-index:1;}
+.hero img.logo{width:190px;height:auto;opacity:.95;margin-bottom:38px;}
+.kicker{
+  font-family:var(--head);font-size:11px;font-weight:600;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--ankh-hi);margin:0 0 20px;
+}
+h1{
+  font-family:var(--display);font-weight:400;font-size:clamp(3.1rem,11vw,5.4rem);
+  line-height:.94;letter-spacing:-.02em;margin:0 0 22px;color:#fff;
+}
+h1 em{font-style:italic;color:var(--ankh-hi);}
+.dek{
+  font-family:var(--body);font-size:1.03rem;line-height:1.6;max-width:30em;
+  margin:0 auto;color:rgba(231,231,231,.76);
+}
+.byline{
+  margin-top:34px;padding-top:22px;border-top:1px solid rgba(165,118,38,.34);
+  display:inline-block;font-family:var(--head);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(231,231,231,.6);
+}
+
+/* ── The order of operations ────────────────────────────────────────── */
+.order{
+  display:flex;gap:0;justify-content:center;align-items:stretch;
+  margin:48px auto 0;max-width:430px;text-align:left;
+}
+.step{flex:1;padding:0 18px;}
+.step + .step{border-left:1px solid rgba(165,118,38,.3);}
+.step .n{
+  font-family:var(--display);font-size:2.5rem;line-height:1;display:block;margin-bottom:6px;
+  color:rgba(231,231,231,.3);
+}
+.step.first .n{color:var(--ankh-hi);}
+.step .w{
+  font-family:var(--head);font-size:11px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(231,231,231,.82);display:block;margin-bottom:7px;
+}
+.step.first .w{color:#fff;}
+.step .d{
+  font-family:var(--body);font-size:.84rem;line-height:1.45;color:rgba(231,231,231,.52);
+  display:block;
+}
+
+/* ── Body ───────────────────────────────────────────────────────────── */
+main{padding:64px 0 20px;}
+main p{margin:0 0 1.25em;}
+main p.lead{font-size:1.22rem;line-height:1.62;color:var(--ink);}
+main strong{font-weight:700;}
+main em{font-style:italic;}
+
+h2{
+  font-family:var(--head);font-weight:600;font-size:1.62rem;line-height:1.22;
+  letter-spacing:-.015em;margin:0 0 .7em;
+}
+.sec{margin-top:76px;}
+.sec .glyph{display:block;width:21px;height:auto;margin:0 0 14px;opacity:.8;}
+.sec .eyebrow{
+  font-family:var(--head);font-size:10px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--ankh);margin:0 0 10px;
+}
+
+/* ── Quote blocks ───────────────────────────────────────────────────── */
+blockquote{
+  margin:2.1em 0;padding:0 0 0 24px;border-left:3px solid var(--ankh);
+  font-family:var(--display);font-size:1.5rem;line-height:1.38;color:var(--mystic);
+}
+blockquote p{margin:0 0 .45em;}
+blockquote p:last-child{margin-bottom:0;}
+blockquote cite{
+  display:block;font-family:var(--head);font-style:normal;font-size:10px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);margin-top:14px;
+}
+
+.panel{
+  position:relative;overflow:hidden;color:var(--mirror);border-radius:4px;
+  background:radial-gradient(ellipse 140% 120% at 50% 40%, #2A1130 0%, #1B0C20 55%, #3B1A4C 100%);
+  padding:44px 38px;margin:2.6em 0;text-align:center;
+}
+.panel::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;
+  background-image:radial-gradient(rgba(231,231,231,.1) 1px, transparent 1.2px);
+  background-size:7px 7px;
+}
+.panel > *{position:relative;z-index:1;}
+.panel img.mark{width:30px;height:auto;margin:0 auto 18px;display:block;opacity:.9;}
+.panel .big{
+  font-family:var(--display);font-size:clamp(1.55rem,4.6vw,2.05rem);line-height:1.3;
+  color:#fff;margin:0;
+}
+.panel .big em{color:var(--ankh-hi);font-style:italic;}
+.panel .attrib{
+  font-family:var(--head);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(231,231,231,.52);margin:18px 0 0;
+}
+.panel .spoken{
+  font-family:var(--display);font-size:clamp(1.3rem,3.9vw,1.68rem);line-height:1.46;
+  color:#fff;margin:0;
+}
+.panel .spoken span{display:block;}
+
+/* ── The short version callout ──────────────────────────────────────── */
+.callout{
+  border:1px solid rgba(165,118,38,.42);border-left:3px solid var(--ankh);
+  border-radius:4px;background:linear-gradient(180deg,#fff,#faf4ec);
+  padding:26px 28px;margin:2.3em 0;
+}
+.callout .tag{
+  font-family:var(--head);font-size:10px;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--ankh);margin:0 0 10px;
+}
+.callout p:last-child{margin-bottom:0;}
+
+/* ── The lotus ladder ───────────────────────────────────────────────── */
+.ladder{
+  margin:2.4em 0;border:1px solid var(--rule);border-radius:4px;
+  background:#fff;overflow:hidden;
+}
+.ladder .lhead{
+  display:flex;align-items:center;gap:14px;padding:14px 22px;
+  border-bottom:1px solid var(--rule);background:#faf6f0;
+  font-family:var(--head);font-size:10px;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink-2);
+}
+.ladder .lhead .hs{width:34px;flex:none;}
+.rung{
+  display:flex;align-items:center;gap:14px;padding:13px 22px;
+  border-bottom:1px solid var(--rule);
+}
+.rung:last-child{border-bottom:0;}
+.rung .sw{
+  width:34px;height:34px;border-radius:50%;flex:none;
+  box-shadow:inset 0 0 0 1px rgba(27,12,32,.16);
+}
+.rung .where{
+  font-family:var(--head);font-size:12px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);flex:1;
+}
+.rung .flower{
+  font-family:var(--display);font-size:1.18rem;color:var(--mystic);text-align:right;
+}
+
+/* ── Stones ─────────────────────────────────────────────────────────── */
+ul.stones{list-style:none;margin:1.9em 0;padding:0;}
+ul.stones li{
+  position:relative;padding:0 0 0 30px;margin:0 0 1.15em;
+}
+ul.stones li::before{
+  content:"";position:absolute;left:0;top:.62em;width:13px;height:2px;background:var(--ankh);
+}
+
+hr.rule{
+  border:0;height:1px;background:var(--rule);margin:66px 0;
+}
+.rule-gold{
+  border:0;height:0;border-top:2px solid var(--ankh);width:54px;margin:58px auto;
+}
+
+.ask{
+  font-family:var(--display);font-size:clamp(1.8rem,5.4vw,2.5rem);line-height:1.22;
+  color:var(--mystic);text-align:center;margin:1.3em 0 .4em;
+}
+.ask-sub{text-align:center;color:var(--ink-2);font-size:1.02rem;margin:0 0 1em;}
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+footer{
+  position:relative;overflow:hidden;margin-top:84px;color:var(--mirror);text-align:center;
+  background:radial-gradient(ellipse 130% 120% at 50% 50%, #1B0C20 0%, #2A1130 50%, #7C2D50 100%);
+  padding:62px 0 54px;
+}
+footer::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;
+  background-image:radial-gradient(rgba(231,231,231,.1) 1px, transparent 1.2px);
+  background-size:7px 7px;
+}
+footer > *{position:relative;z-index:1;}
+footer .closing{
+  font-family:var(--display);font-size:1.3rem;line-height:1.5;max-width:30em;margin:0 auto 34px;
+  color:rgba(231,231,231,.86);font-style:italic;
+}
+footer img.logo{width:200px;height:auto;opacity:.92;}
+footer .sig-name{
+  font-family:var(--head);font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ankh-hi);margin:26px 0 0;
+}
+footer .meta{
+  font-family:var(--head);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(231,231,231,.42);margin:12px 0 0;
+}
+
+@media print{
+  body{background:#fff;font-size:11.5pt;}
+  .hero,.panel,footer{background:#fff !important;color:#1B0C20 !important;}
+  .hero::after,.panel::after,footer::after{display:none;}
+  h1,.panel .big,.panel .spoken,footer .closing{color:#1B0C20 !important;}
+  .sec{margin-top:34px;page-break-inside:avoid;}
+}
+
+@media (max-width:620px){
+  body{font-size:17.5px;}
+  .wrap{padding:0 22px;}
+  .panel{padding:34px 24px;}
+  blockquote{font-size:1.3rem;}
+  .order{max-width:100%;}
+  .step{padding:0 12px;}
+  .step .n{font-size:2rem;}
+  .step .w{font-size:10px;letter-spacing:.16em;}
+  .rung{padding:12px 16px;gap:11px;}
+  .ladder .lhead{padding:12px 16px;}
+  .rung .flower{font-size:1.02rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="./assets/logo-inline-light.png" alt="Christopher Hager">
+    <p class="kicker">A Practice</p>
+    <h1>Ground <em>First</em></h1>
+    <p class="dek">Everybody wants the shield. The shield is the second thing.</p>
+
+    <div class="order">
+      <div class="step first">
+        <span class="n">1</span>
+        <span class="w">Ground</span>
+        <span class="d">Know where your feet are.</span>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <span class="w">Then shield</span>
+        <span class="d">Cheap, effective, and never the first move.</span>
+      </div>
+    </div>
+
+    <div class="byline">Christopher Hager · Guanacaste, Costa Rica</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="lead">Everybody wants the shield.</p>
+
+  <p>They come in asking how to keep other people's stuff out. How to not get wrecked by the room. How to walk into a family dinner and leave with their own energy still in their own body. Fair question. I had it too.</p>
+
+  <p>But the shield is the second thing. It is never the first thing, and if you build it first you end up with a very well defended person who is not actually standing anywhere.</p>
+
+  <p>So: ground first. Every time. The more you know who you are and where your feet are, the less of anybody else's weather lands on you in the first place. <strong>You cannot be knocked off a thing you are not standing on.</strong></p>
+
+  <p>That is the whole teaching. The rest is just how.</p>
+
+  <hr class="rule">
+
+  <section class="sec" style="margin-top:0;">
+    <img class="glyph" src="./assets/water-dark.png" alt="">
+    <p class="eyebrow">The First Thing</p>
+    <h2>Roots</h2>
+
+    <p>Sit down. Feet flat on the floor, both of them. Legs uncrossed, arms uncrossed, hands on your knees with the palms facing down. You are not holding anything right now. You are putting something down.</p>
+
+    <p>Start at the top of your head and bring everything down.</p>
+
+    <p>Down through the neck. Down the arms. Into the belly. Down into each leg, through the knees, into the soles of your feet. Let it move like water finding the lowest place in you, because that is what it is doing.</p>
+
+    <p>When you can actually feel your feet, grow roots out of them.</p>
+
+    <p>Not a nice idea about roots. <em>Roots.</em> Down through the floor, through the foundation, through the dirt, down past where the dirt stops being dirt, until they find stone. Then hook in. You are a tree now and you are not going anywhere.</p>
+
+    <p>Stay there until something in your chest drops half an inch.</p>
+
+    <div class="callout">
+      <p class="tag">Ninety seconds and no chair</p>
+      <p>Go outside, take your shoes off, and put your ass in the grass. Hug a tree if there is one. Hold a plant if there isn't. The body knows how to do this without any instructions from you, and dirt has never once needed a technique.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/horus-dark.png" alt="">
+    <p class="eyebrow">The Second Thing</p>
+    <h2>The Cloak</h2>
+
+    <p>Now, and only now, the shield.</p>
+
+    <p>Once you are rooted, wrap yourself. A cloak, head to foot, with a hood. Pick your own colour. Mine is the deep blue I associate with Michael, and that is a preference, not a prescription. If yours is gold or green or white or something you cannot name, that is yours and it is correct.</p>
+
+    <p>The cloak has one rule: <strong>love comes through it, and nothing else does.</strong> It covers everything except your eyes, because you still have to see.</p>
+
+    <p>Put it on before you leave the house. Put it on before the meeting. Put it on when you notice you have gone thin.</p>
+
+    <div class="panel">
+      <img class="mark" src="./assets/horus-light.png" alt="">
+      <p class="big">It is a battery, not a wall. It runs down. The day you forget is not a failure, <em>it is Tuesday.</em></p>
+    </div>
+
+    <p>You will have to put it on again tomorrow and the day after that. Re-wrap and move on.</p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/crescent-dark.png" alt="">
+    <p class="eyebrow">When You Are Jammed</p>
+    <h2>The Lotus Ladder</h2>
+
+    <p>This one is for when you are not scattered, you are jammed. Something is stuck and you cannot find it.</p>
+
+    <p>Go down the body, one station at a time, and see each one as a flower. Here is the part that matters more than the colours: <strong>each flower opens as far as it wants to and not one millimetre further.</strong> You are not prying anything open. You are asking.</p>
+
+    <div class="ladder">
+      <div class="lhead">
+        <span class="hs"></span>
+        <span style="flex:1">Where</span>
+        <span>The flower</span>
+      </div>
+      <div class="rung"><span class="sw" style="background:#FFFFFF"></span><span class="where">Crown</span><span class="flower">White</span></div>
+      <div class="rung"><span class="sw" style="background:#7B3FA8"></span><span class="where">Third eye</span><span class="flower">Purple</span></div>
+      <div class="rung"><span class="sw" style="background:#2E6FBF"></span><span class="where">Throat</span><span class="flower">Blue</span></div>
+      <div class="rung"><span class="sw" style="background:#2E8B57"></span><span class="where">Heart</span><span class="flower">Green</span></div>
+      <div class="rung"><span class="sw" style="background:#E3B505"></span><span class="where">Solar plexus</span><span class="flower">Deep yellow</span></div>
+      <div class="rung"><span class="sw" style="background:#D96B1F"></span><span class="where">Sacral</span><span class="flower">Deep orange</span></div>
+      <div class="rung"><span class="sw" style="background:#9B1B2E"></span><span class="where">Root</span><span class="flower">Deep red</span></div>
+    </div>
+
+    <p>A closed flower is information, not a problem. If the throat will not open today, the throat has a reason, and forcing it is how people end up saying true things to the wrong person. Note it. Come back.</p>
+
+    <p>When you get to the bottom, say it out loud:</p>
+
+    <div class="panel">
+      <img class="mark" src="./assets/ankh-light.png" alt="">
+      <p class="spoken">
+        <span>I am safe in my body.</span>
+        <span>I am safe and grounded on this earth.</span>
+        <span>It is safe for me to be here, right now, in this body, on this earth.</span>
+      </p>
+      <p class="attrib">Out loud</p>
+    </div>
+
+    <p>Out loud. Words are spells and you are casting one.</p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/scarab-dark.png" alt="">
+    <p class="eyebrow">Not Mine</p>
+    <h2>The Ultraviolet Flame</h2>
+
+    <p><strong>This one is not mine.</strong> It came to me through others, and the written lineage I can point to runs through Carol Channell-Cox's Christ Energy Prayer, which I pray to open every session. I use it constantly and I did not invent a word of it.</p>
+
+    <p>For the moment you are carrying something that is not yours and you know it.</p>
+
+    <p>See the flame. Scan yourself and find the thing that came in from outside. You will know which one it is; it has a different texture than your own grief does.</p>
+
+    <p>Then ask your guides to take it, out loud, and say plainly that it is not yours and not for your highest good. Thank them. Scan again. Then go back to the roots, because you have just opened something and you do not leave it open.</p>
+
+    <p>The move inside this, and it is the move inside everything I pray, is that <strong>nothing gets destroyed.</strong> It gets returned.</p>
+
+    <blockquote>
+      <p>The flame is not an incinerator. It is a door home for something that wandered in.</p>
+    </blockquote>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/arm-dark.png" alt="">
+    <p class="eyebrow">Optional</p>
+    <h2>Stones, briefly</h2>
+
+    <p>I carry stones. I am not going to make a science claim about them and I am not going to apologise for them either.</p>
+
+    <ul class="stones">
+      <li><strong>Black tourmaline</strong> for deep work, in the pocket. Root-chakra stone, so it works on the ground rather than the shield, which is the whole point of this page. It also takes your own dark thoughts, not just the room's, which is the use nobody mentions.</li>
+      <li><strong>Tiger's eye</strong> when you need to feel solid in the world. Warriors carried it. Make of that what you want.</li>
+      <li><strong>Selenite</strong> to clear. Wand it slowly from your crown to your feet with your eyes closed, and where you catch something stuck, hold it there and ask. <strong>Never run selenite under water.</strong> It will dissolve, and you will be sad. Moonlight or smoke.</li>
+    </ul>
+
+    <p>If stones are not your thing, skip this whole section. The practices above do not need them and never did.</p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/ankh-dark.png" alt="">
+    <p class="eyebrow">Working On Others</p>
+    <h2>Before and after</h2>
+
+    <p><strong>Before any work on anybody else:</strong> be clean, be grounded, and say it.</p>
+
+    <blockquote>
+      <p>I am a conductor for light, and I am protected by the Source.</p>
+    </blockquote>
+
+    <p><strong>After any work on anybody else:</strong> shut it down. Wash your hands. Actually wash them. You wouldn't wipe your ass and then go straight to dinner, and you don't close a session by just standing up and checking your phone either.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec" style="margin-top:0;">
+    <img class="glyph" src="./assets/ibis-dark.png" alt="">
+    <p class="eyebrow">The Last Thing</p>
+    <h2>Go back to the top</h2>
+
+    <p>Everything on this page is secondary to the first thing.</p>
+
+    <p>The more grounded you are, and the more certain you are of who you actually are, the less any of this you will need. Toxic rooms stop being a threat and start being weather. You will still put the cloak on, because it is cheap and it works. But you will notice you are doing it less out of fear and more out of habit, and that is the direction we are going.</p>
+
+    <p>Protection is not the goal. Protection is what you do while you are building the thing that makes protection unnecessary.</p>
+
+    <hr class="rule-gold">
+
+    <p class="ask">Ground first.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="closing">You cannot be knocked off a thing you are not standing on.</p>
+    <img class="logo" src="./assets/logo-inline-light.png" alt="Christopher Hager">
+    <p class="sig-name">Christopher Hager</p>
+    <p class="meta">cahager.com · Guanacaste, Costa Rica</p>
+  </div>
+</footer>
+
+</body>
+</html>
