@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ground First · Christopher Hager</title>
 
-<!-- Quiet publish: the link works for anyone it is given to, search engines skip it.
-     To make this page publicly indexable, delete the two meta lines below and robots.txt. -->
-<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<meta name="googlebot" content="noindex, nofollow">
+<!-- Indexable, on Chris's instruction 2026-10-07. Was a quiet publish for one day.
+     To go quiet again: add a noindex robots meta here and a robots.txt with "Disallow: /". -->
+<meta name="robots" content="index, follow">
 
 <meta name="author" content="Christopher Hager">
 <meta name="description" content="Everybody wants the shield. The shield is the second thing. A practice for grounding and protection.">
@@ -35,6 +34,8 @@
   --triton:#7C2D50;
   --mystic:#3B1A4C;
   --gaia:#1D3237;
+  --uv:#7C3FAF;
+  --uv-ink:#3B1A4C;
   --paper:#FBF8F4;
   --ink:#1B0C20;
   --ink-2:#584C5E;
@@ -177,6 +178,24 @@ blockquote cite{
 }
 .callout p:last-child{margin-bottom:0;}
 
+/* ── The ultraviolet flame prayer ───────────────────────────────────── */
+.flame{
+  position:relative;background:#fff;border-radius:5px;
+  border:1px solid rgba(124,63,175,.3);
+  border-left:4px solid var(--uv);
+  box-shadow:0 1px 0 rgba(124,63,175,.1), 0 14px 34px -18px rgba(59,26,76,.42);
+  padding:30px 32px 32px;margin:2.5em 0;
+}
+.flame .tag{
+  font-family:var(--head);font-size:10px;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--uv);margin:0 0 14px;
+}
+.flame .words{
+  font-family:var(--display);font-size:clamp(1.22rem,3.4vw,1.46rem);line-height:1.5;
+  color:var(--uv-ink);margin:0;
+}
+.flame .words em{font-style:italic;color:var(--uv);}
+
 /* ── The lotus ladder ───────────────────────────────────────────────── */
 .ladder{
   margin:2.4em 0;border:1px solid var(--rule);border-radius:4px;
@@ -253,6 +272,22 @@ footer .meta{
   font-family:var(--head);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
   color:rgba(231,231,231,.42);margin:12px 0 0;
 }
+footer .cta{
+  margin:34px 0 0;padding-top:30px;border-top:1px solid rgba(165,118,38,.3);
+}
+footer .cta p{
+  font-family:var(--body);font-size:.98rem;line-height:1.6;max-width:26em;
+  margin:0 auto 20px;color:rgba(231,231,231,.68);
+}
+footer a.book{
+  display:inline-block;font-family:var(--head);font-size:11px;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;text-decoration:none;
+  color:var(--ankh-hi);border:1px solid rgba(165,118,38,.62);border-radius:3px;
+  padding:14px 30px;transition:background .18s ease, color .18s ease;
+}
+footer a.book:hover,footer a.book:focus{
+  background:var(--ankh);color:#1B0C20;border-color:var(--ankh);
+}
 
 @media print{
   body{background:#fff;font-size:11.5pt;}
@@ -260,6 +295,8 @@ footer .meta{
   .hero::after,.panel::after,footer::after{display:none;}
   h1,.panel .big,.panel .spoken,footer .closing{color:#1B0C20 !important;}
   .sec{margin-top:34px;page-break-inside:avoid;}
+  .flame{box-shadow:none;page-break-inside:avoid;}
+  footer a.book{color:#1B0C20 !important;border-color:#A57626;}
 }
 
 @media (max-width:620px){
@@ -274,6 +311,8 @@ footer .meta{
   .rung{padding:12px 16px;gap:11px;}
   .ladder .lhead{padding:12px 16px;}
   .rung .flower{font-size:1.02rem;}
+  .flame{padding:24px 22px 26px;}
+  footer a.book{padding:13px 22px;letter-spacing:.16em;}
 }
 </style>
 </head>
@@ -347,9 +386,15 @@ footer .meta{
 
     <p>Now, and only now, the shield.</p>
 
-    <p>Once you are rooted, wrap yourself. A cloak, head to foot, with a hood. Pick your own colour. Mine is the deep blue I associate with Michael, and that is a preference, not a prescription. If yours is gold or green or white or something you cannot name, that is yours and it is correct.</p>
+    <p>Once you are rooted, wrap yourself. A cloak, head to foot, with a hood. Pick your own colour. Mine is the deep blue of <strong>Archangel Michael</strong>, because what I am reaching for is the flaming sword of truth. That is a preference, not a prescription. If yours is gold or green or white or something you cannot name, that is yours and it is correct.</p>
 
-    <p>The cloak has one rule: <strong>love comes through it, and nothing else does.</strong> It covers everything except your eyes, because you still have to see.</p>
+    <p>The cloak has one rule.</p>
+
+    <blockquote>
+      <p>Only love and light shall enter.<br>Only love and light shall leave.</p>
+    </blockquote>
+
+    <p>It covers everything except your eyes, because you still have to see.</p>
 
     <p>Put it on before you leave the house. Put it on before the meeting. Put it on when you notice you have gone thin.</p>
 
@@ -376,8 +421,8 @@ footer .meta{
         <span style="flex:1">Where</span>
         <span>The flower</span>
       </div>
-      <div class="rung"><span class="sw" style="background:#FFFFFF"></span><span class="where">Crown</span><span class="flower">White</span></div>
-      <div class="rung"><span class="sw" style="background:#7B3FA8"></span><span class="where">Third eye</span><span class="flower">Purple</span></div>
+      <div class="rung"><span class="sw" style="background:#7B3FA8"></span><span class="where">Crown</span><span class="flower">Purple</span></div>
+      <div class="rung"><span class="sw" style="background:#3B3B8F"></span><span class="where">Third eye</span><span class="flower">Indigo</span></div>
       <div class="rung"><span class="sw" style="background:#2E6FBF"></span><span class="where">Throat</span><span class="flower">Blue</span></div>
       <div class="rung"><span class="sw" style="background:#2E8B57"></span><span class="where">Heart</span><span class="flower">Green</span></div>
       <div class="rung"><span class="sw" style="background:#E3B505"></span><span class="where">Solar plexus</span><span class="flower">Deep yellow</span></div>
@@ -414,6 +459,11 @@ footer .meta{
     <p>See the flame. Scan yourself and find the thing that came in from outside. You will know which one it is; it has a different texture than your own grief does.</p>
 
     <p>Then ask your guides to take it, out loud, and say plainly that it is not yours and not for your highest good. Thank them. Scan again. Then go back to the roots, because you have just opened something and you do not leave it open.</p>
+
+    <div class="flame">
+      <p class="tag">The prayer</p>
+      <p class="words">I am ultraviolet, angelic fire. I am the liberating power of this light and I weave this light through every cell and fiber of my being. This light removes any energies, cords, threads, agreements, and vows, which are sent to the ultraviolet fire, <em>never again to be incarnated in me or in anyone.</em> For these blessings we give thanks.</p>
+    </div>
 
     <p>The move inside this, and it is the move inside everything I pray, is that <strong>nothing gets destroyed.</strong> It gets returned.</p>
 
@@ -477,7 +527,12 @@ footer .meta{
     <p class="closing">You cannot be knocked off a thing you are not standing on.</p>
     <img class="logo" src="./assets/logo-inline-light.png" alt="Christopher Hager">
     <p class="sig-name">Christopher Hager</p>
-    <p class="meta">cahager.com · Guanacaste, Costa Rica</p>
+    <p class="meta">Guanacaste, Costa Rica</p>
+
+    <div class="cta">
+      <p>If you want to go further than a page can take you, that is what the sessions are for.</p>
+      <a class="book" href="https://cahager.com">Book a session</a>
+    </div>
   </div>
 </footer>
 
